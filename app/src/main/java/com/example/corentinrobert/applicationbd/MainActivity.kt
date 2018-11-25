@@ -18,9 +18,7 @@ class MainActivity : AppCompatActivity(),AnkoLogger {
     private fun showList() {
         list = courseDb.requestCourse()
         txtView.text=""
-        info("NB COURS : ${list.size}")
         for (c in list) {
-            info("Voici un cours ${c.title} d'une durée de : ${c.time}h")
             txtView.text = txtView.text.toString() + "\nId : ${c.id} Cours : ${c.title} durée : ${c.time}h"
         }
     }
